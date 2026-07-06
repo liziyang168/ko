@@ -1710,7 +1710,7 @@ func TestDebugger(t *testing.T) {
 }
 
 // TestWalkRecursiveSymlinkTraversal verifies that walkRecursive rejects symlinks
-// in kodata/ that point outside the kodata root, preventing host files from being
+// in kodata/ that point outside the allowed root, preventing host files from being
 // packed into the container image.
 func TestWalkRecursiveSymlinkTraversal(t *testing.T) {
 	// Build a temp repo with a kodata dir containing a symlink that escapes it.

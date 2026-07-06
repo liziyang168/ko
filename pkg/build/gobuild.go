@@ -843,8 +843,8 @@ func walkRecursive(tw *tar.Writer, root, chroot, absAllowedRoot string, creation
 			return fmt.Errorf("filepath.EvalSymlinks(%q): %w", hostPath, err)
 		}
 
-		// Verify the resolved path remains within the kodata root.  A symlink
-		// pointing outside the kodata directory would otherwise cause ko to pack
+		// Verify the resolved path remains within the allowed root.  A symlink
+		// pointing outside the allowed root would otherwise cause ko to pack
 		// arbitrary host files (e.g. ~/.ssh/id_rsa, /etc/passwd) into the image.
 		absEvalPath, err := filepath.Abs(evalPath)
 		if err != nil {
