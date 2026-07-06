@@ -711,14 +711,6 @@ func (g *gobuild) packageDir(ref reference) (string, error) {
 	return filepath.Dir(pkgs[0].GoFiles[0]), nil
 }
 
-func (g *gobuild) kodataPath(ref reference) (string, error) {
-	dir, err := g.packageDir(ref)
-	if err != nil {
-		return "", err
-	}
-	return filepath.Join(dir, "kodata"), nil
-}
-
 func resolveSymlinkRoot(root string) (string, error) {
 	resolvedRoot, err := filepath.EvalSymlinks(root)
 	if err != nil {
