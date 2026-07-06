@@ -58,9 +58,9 @@ import (
 const (
 	defaultAppFilename = "ko-app"
 
-	defaultGoBin              = "go"                        // defaults to first go binary found in PATH
-	goBinPathEnv              = "KO_GO_PATH"                // env lookup for optional relative or full go binary path
-	koDataPathAllowedRootEnv  = "KO_DATA_PATH_ALLOWED_ROOT" // optional override for the kodata symlink trust boundary
+	defaultGoBin             = "go"                        // defaults to first go binary found in PATH
+	goBinPathEnv             = "KO_GO_PATH"                // env lookup for optional relative or full go binary path
+	koDataPathAllowedRootEnv = "KO_DATA_PATH_ALLOWED_ROOT" // optional override for the kodata symlink trust boundary
 )
 
 // GetBase takes an importpath and returns a base image reference and base image (or index).
